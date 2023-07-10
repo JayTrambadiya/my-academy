@@ -1,0 +1,9 @@
+nav :nth-child(8){
+    text-decoration: underline;
+    font-size: 20px;
+    color:midnightblue;
+}
+main{
+    height:70vh;
+    text-align:center;
+}

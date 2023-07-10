@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmation</title>
+  <link rel="shortcut icon" href=".\IMAGES\final-icon.png" type="image/png">
+  <link rel="stylesheet" href=".\CSS\commonback.css">
+  <link rel="stylesheet" href=".\CSS\confirmation.css">
+  <script>
+    function myFunction() {
+      let text;
+      if (confirm("Do you want to apply for addmission? ") === true) {
+        text = "<h1> Greetings !!  You have Submitted Application Successfully </h1> ";
+      } else {
+        text = "<h1> You have cancelled!!</h1>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    }
+    </script>
+</head>
+
+<body onLoad="myFunction();">
+  <header>
+    <img src=".\IMAGES\final-nav-logo.png" alt="LOGO">
+    <h1>MyAcademy</h1>
+  </header>
+          <nav>
+            <img src=".\IMAGES\personalinfo.png">
+            <a href="./Personalinfo.html">
+                Personal Info</a>
+            <img src=".\IMAGES\studyinfo.png">
+            <a href="./studyinfo.html"> Study Info</a>
+            <img src=".\IMAGES\confirmation_lock.webp">
+            <a href="./confirmation.html"> Confirmation</a>
+        </nav>
+  <main id="demo" >
+
+  </main >
+
+  <footer>
+    <pre>Contact us: Mobile no:+91-9938299328  | Emailid: myacademyclasses@gmail.com </pre>
+    <p>MyAcademy-20CP064 & 20CP076 &copy; 2022 - ALL Rigths Reserved</p>
+  </footer>
+
+    
+</body>
+</html>

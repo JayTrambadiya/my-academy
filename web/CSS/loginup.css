@@ -1,0 +1,182 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative ;
+    width: 100vw;
+    height: 100vh;
+}
+.mainbody{
+
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-image: url(../IMAGES/studentportal.png);
+    background-repeat: no-repeat;
+    background-position: center; 
+    position: absolute;
+    /* backdrop-filter: blur(8px); */
+  -webkit-filter: blur(8px);
+
+}
+
+
+.sub {
+    width:10vw;
+    
+    background-color:rgb(67, 9, 114);
+      margin: 2px;
+      padding: 5px;      
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap ;
+    background-color:azure;
+    background-image: url(../IMAGES/studentportal.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: right;
+    /* box-sizing: content -box; */
+    z-index: 5;
+    position:absolute;
+    min-width: 70vw;
+    min-height: 80vh;
+    margin: 10vh 15vw;
+    border-radius: 5px ;
+    justify-content: flex-start;
+    align-items:center;
+    
+    
+}
+
+.login{
+    margin-left: 2em ;
+   /* align-self: flex-start; */
+    background-color: white; 
+   width:45%;
+    /* height: 100%; */
+     /* z-index: 10;  */
+    color:rgb(67, 9, 114) ;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:bold;
+    font-size: 1.2em;
+    /* border  : 1px solid wheat; */
+    /* border-radius: 10px; */
+
+    /* font-size-adjust: ; */
+    /* position: absolute; */
+    /* margin: 28vh 14vw; */
+    /* border: 5px solid white; */
+    border-radius: 25px; 
+    
+}
+
+
+
+/* form{
+    margin: 2rem;
+    margin-left: 0;
+     display: flex;
+    flex-wrap:  nowrap;
+    flex-basis: content;
+    flex-direction: column;
+    justify-content:center ; 
+
+    align-items:center;  
+} */
+
+h1{
+    text-align: center;
+}
+form div{
+    padding: 10%;
+    padding-bottom: 4%;
+}
+
+label{
+    display: block;
+    margin-bottom:8%;
+}
+ 
+.add{
+    /* box-sizing: border-box; */
+    width: 90%;
+    padding: .9em;
+    letter-spacing: .8px;
+    /* line-height: 10%; */
+    /* margin:1em 0em; */
+    border: none;
+    border: 1px  ;
+    color: white;
+    background-color: rgb(67, 9, 114);
+    border-radius: 5px;
+    /* margin-right: 10%; */
+}
+
+
+ .aflex{
+    display: flex;
+    background-size: cover;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ .login a{
+    background-color:rgb(67, 9, 114);
+    text-align: center;
+    padding:  .5rem;
+    /* padding:.5em; */
+    border: 2px solid rgb(67, 9, 114);
+    border-radius: 6px;
+    color: white;
+    /* margin:2vh 2vw; */
+    /* margin-bottom: .5rem; */
+    text-decoration: none;
+
+}
+@media only screen and (min-width: 200px) and (max-width: 550px ){
+    .container{
+        background-image: none;
+        background: none;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+        /* margin: 0; */
+        /* margin: 10% 11%;  */
+        /* margin: 10vh,11vh; */
+    }
+    .login{
+        /* margin-left: 0; */
+        /* height: ; */
+        background-color: azur;
+        width: 90vw;
+        margin: auto;
+        padding:5vw 0vw;
+        font-size: large;
+    }
+}
+  @media only screen and (min-width: 550px) and (max-width: 850px ){
+    .container{
+        position:relative;
+        width: 90vw;
+        height: 70vw;
+        margin: 10vw 5vw ;
+    }
+    .login{
+        align-self: flex-start;
+        margin-top:15vh;
+        font-size: medium;
+    }
+}  
+

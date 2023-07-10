@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalinfo</title>
+    <link rel="stylesheet" href=".\CSS\registration.css">
+    <link rel="shortcut icon" href=".\IMAGES\final-icon.png" type="image/png">
+    <script>
+        function Validateform() {
+            {    // for SurName , Firstname and Lastname 
+                var y = document.forms["personalinfo"]["FirstName"].value;
+                if (y ==="") {
+                    alert("Firstname is Required");
+                    return false;
+                }
+                y = document.forms["personalinfo"]["Lastname"].value;
+                if (y ==="") {
+                    alert("Lastname is Required");
+                    return false;
+                }
+                y = document.forms["personalinfo"]["Surname"].value;
+                if (y === "") {
+                    alert("Surname is Required");
+                    return false;
+                }
+            }
+
+
+            {// for email validation
+                var x = document.forms["personalinfo"]["email"].value;
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                if (x ==="") {
+                    alert("Email address must required for further communication");
+                }
+                else if (x.match(mailformat)) {
+
+                }
+                else {
+                    alert("You have entered an invalid email address!");
+                    document.forms["personalinfo"]["email"].focus();
+                    return false;
+                }
+            }
+
+            {// for DOB validation
+                var checkdob = document.forms["personalinfo"]["dob"].value;
+                var x = 0, y = 0;
+                for (i = 0; i < 7; i++) {
+                    if (i < 4) {
+                        x = x + checkdob[i];
+                    }
+                    if (i < 8 && i > 5) {
+                        y = y + checkdob[i];
+                    }
+                }
+                if (x > 2012) {
+                    if (x === 2013 && y > 06) {
+                        alert("please select a valid Date Of Birth");
+                        return false;
+                    }
+                }
+            }
+
+
+            {
+                // for Parent's Phone validation
+                var reg = /^([6-9])([0-9]){9,9}$/
+                if (false === reg.test(document.forms["personalinfo"]["Contact1"].value)) {
+                    alert("enter a valid Phone Number");
+                    document.forms["personalinfo"]["Contact1"].focus();
+                    return false;
+                }
+                if (false === reg.test(document.forms["personalinfo"]["Contact2"].value)) {
+                    alert("enter a valid Phone Number");
+                    document.forms["personalinfo"]["Contact2"].focus();
+                    return false;
+                }
+            }
+            // for gender
+            {
+                let gen = document.forms["personalinfo"]["gender"].value;
+                if (gen === undefined || gen === null || gen === "") {
+                    alert("please select gender");
+                    return false;
+                }
+            }
+            return true;
+        }        
+    </script>
+
+</head>
+
+<body>
+    <a href="./studyinfo.html"></a>
+    <header>
+        <img src=".\IMAGES\final-nav-logo.png" alt="LOGO">
+        <h1>MyAcademy</h1>
+    </header>
+    <nav>
+        <img src=".\IMAGES\personalinfo.png">
+        <a href=".\Personalinfo.html">
+            Personal Info</a>
+        <img src=".\IMAGES\studyinfo.png">
+        <a href="./studyinfo.html"> Study Info</a>
+        <!--<img src=".\IMAGES\uploadingfile1.webp">-->
+        <!--<a href="./uploading_file.html "> Uploading file</a>-->
+        <img src=".\IMAGES\confirmation_lock.webp">
+        <a href="./confirmation.html"> Confirmation</a>
+    </nav>
+    <form name="personalinfo" action="./jsp_of_personal_info.jsp" method="post">
+        <!-- action="./studyinfo.html"  -->
+        <label for="FirstName">Firstname :<br>
+            <input type="text" name="Firstname" autocomplete="off"></label>
+        <label for="LastName">Lastname : </br>
+            <input type="text" name="Lastname" autocomplete="off"></label>
+        <label for="SurName">Surname : <br>
+            <input type="text" name="Surname" autocomplete="off"></label>
+        <label for="email">Email : <br>
+            <input type="text" name="email" id="email" autocomplete="off"></label>
+        <label for="DOB">DOB : <br>
+            <input type="date" name="dob" id="DOB"></label>
+        <label for="gender">Gender : <br>
+            <input type="radio" name="gender" value="gender1"> Male
+            <input type="radio" name="gender" value="gender2"> Female
+            <input type="radio" name="gender" value="gender3"> Others
+        </label>
+        <label for="Contact">Contact Number:
+            <label for="Parent"> Parent<br></label>
+            <input type="text" name="Contact1" id="Parent" autocomplete="off">
+            <label for="Own"><br>Own<br></label>
+            <input type="text" name="Contact2" id="Own" autocomplete="off">
+        </label>
+        <label for="Address1">Address line 1<br>
+            <input type="address" name="address1" id="line1">
+            <label for="Address2"><br>line2<br></label>
+            <input type="address" name="address2" id="line2"></label>
+        <label for="city">City :<br>
+            <select name="city" id="city">
+                <option value="Ahemdabad">Ahemdabad</option>
+                <option value="Ananad">Ananad</option>
+                <option value="Vadodara">Vadodara</option>
+                <option value="Surat">Surat</option>
+                <option value="Rajkot">Rajkot</option>
+            </select></label>
+        <label for="Nationality">Nationality
+            <input type="text" id="Nationality" value="INDIA" readonly></label>
+        <a href="./Personalinfo.html">Refresh</a>
+        <!-- <a href="./studyinfo.html" onclick=" return Validateform()">Next</a> -->
+        <input type="submit" value="Next" id="Next" onclick=" return Validateform() "" >
+<!-- onclick=" return Validateform() -->
+    </form>
+    <footer>
+        <pre>Contact us: Mobile no:+91-9938299328  | Emailid: myacademyclasses@gmail.com </pre>
+        <p>MyAcademy-20CP064 & 20CP076 &copy; 2022 - ALL Rigths Reserved</p>
+</footer>
+
+</body>
+
+</html>

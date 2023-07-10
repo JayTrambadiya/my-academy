@@ -1,0 +1,31 @@
+form{
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns:repeat(2,1fr);
+    justify-items: center;
+    align-items: center;
+    width: 40vw;
+    height: 70vh;
+    margin: 4vh 30vw;
+    margin-bottom: 0;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: large;
+}
+input[type="submit" ]{
+    height:45%;
+    width: 70%;
+    font-size:20px;
+}
+form :nth-child(15){ /* for selecting refresh button*/
+font-size: 20px;
+width:70%;
+height:45%;
+}
+nav :nth-child(6){
+    text-decoration: underline;
+    font-size: 20px;
+    color:midnightblue;
+
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href=".\CSS\signup.css">
+    <link rel="shortcut icon" href=".\IMAGES\final-icon.png" type="image/png">
+    <script text="javascript">
+        function check() {
+            var msg = "";
+            var x = document.forms["signupform"]["Email"].value;
+                var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                if (x==="") {
+                    alert("Email address must required !!!");
+                }
+
+
+                else if (x.match(mailformat)) {
+                    var repass = /^\w{4,10}$/;
+                    var reconpass = /^\w{4,10}$/;
+                    if (signupform.Password.value.length === 0) {
+                        msg += "Password Id Required !";
+                    }
+                    else if (!repass.test(signupform.Password.value)) {
+                        msg += "Invalid Password Id";
+                    }
+                    else if (signupform.cPassword.value.length === 0) {
+                        msg += "Confirm Password Required !";
+                    }
+                    else if (!repass.test(signupform.cPassword.value)) {
+                        msg += "Invalid Password Id";
+                    }
+                    else if (signupform.Password.value !== signupform.Password.value){
+                        msg+="Both Password Not same ";
+                    }
+
+
+
+                        if (msg !== "") {
+                            alert(msg);
+                            return false;
+                        }
+                    return true;
+                }
+
+                
+                else {
+                    alert("You have entered an invalid email address!");
+                    document.forms["personalinfo"]["email"].focus();
+                    return false;
+                }
+            }
+            
+                  
+
+
+                </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mainbody">
+        </div>
+        <h1>Welcome to My Academy !</h1>
+        <div class="main">
+            <h2>Create Account</h2>
+            <form name="signupform" action="./signup.jsp"  method="post">
+                <label for="email">Email</label>
+                <input type="email" name="Email" class="email" required>
+                <label for="pword">Password</label>
+                <input type="Password" name="Password" id="pword" required>
+                <label for="cpword">Confirm Password</label>
+                <input type="password" name="cPassword" id="cpword" required>
+                <br>
+                <label for="terms&condition">
+                    <input type="checkbox" id="terms_condi" required> i accept the <a href="#">Terms Of Use</a> & <a
+                        href="#">Privacy Policy</a>
+                </label>
+                <label for="signup">
+                    <input type="submit"  onClick=" return check()" value="Signup">
+                </label>
+                <p>already have Account? <a target="_self" href=".\loginpage.html">login</a> </p>
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>

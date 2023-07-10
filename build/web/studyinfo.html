@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Info</title>
+    <link rel="stylesheet" href=".\CSS\commonback.css">
+    <link rel="stylesheet" href=".\CSS\studyinfo.css">
+    <link rel="shortcut icon" href=".\IMAGES\final-icon.png" type="image/png">
+
+</head>
+
+<body>
+
+    <body>
+        <header>
+            <img src=".\IMAGES\final-nav-logo.png" alt="LOGO">
+            <h1>MyAcademy</h1>
+        </header>
+        <nav>
+            <img src=".\IMAGES\personalinfo.png">
+            <a href="./Personalinfo.html">
+                Personal Info</a>
+            <img src=".\IMAGES\studyinfo.png">
+            <a href="./studyinfo.html"> Study Info</a>
+            
+
+            
+            <img src=".\IMAGES\confirmation_lock.webp">
+            <a href="./confirmation.html"> Confirmation</a>
+        </nav>
+        <form action="./jsp_of_study_info.jsp" name="studyinfo" method="post">
+
+            <label for="Class">Class</label>
+
+            <select name="Class" id="Class" required>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+
+            <label for="Rollno">Rollno</label>
+
+            <input type="text" name="rollno" required>
+
+            <label for="Division">Division</label>
+
+            <input type="text" name="division" required>
+
+            <label for="Schoolname">School Name</label>
+
+            <input type="text" name="schoolname" required>
+
+            <label for="School Registration number">School Registration number</label>
+
+            <input type="text" name="regno" required>
+
+            <label for="School Address">School Address Line1<br>
+                <input type="text" name="schooladdress1" required>
+                <label for="Line2"><br>Line2 <br></label>
+                <input type="text" name="schooladdress2"></label>
+
+            <div>
+                <a href="studyinfo.html">Refresh</a>
+                <input type="submit" value="Next">
+            </div>
+            </label>
+        </form>
+        <footer>
+            <pre>Contact us: Mobile no:+91-9938299328  | Emailid: myacademyclasses@gmail.com </pre>
+            <p>MyAcademy-20CP064 & 20CP076 &copy; 2022 - ALL Rigths Reserved</p>
+        </footer>
+        
+    </body>
+
+</html>

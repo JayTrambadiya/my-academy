@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>login</title>
+  <link rel="shortcut icon" href=".\IMAGES\final-icon.png" type="image/png">
+  <link rel="stylesheet" href=".\CSS\loginup.css"/>
+  <script text="javascript">
+    function check() {
+      var msg = "";
+      var reemail = /^[a-zA-Z0-9_.-]+@[a-zA_Z_.-]+\.[a-zA_Z]{2,4}$/;
+      var repass = /^\w{4,10}$/;
+      if (loginform.Email.value.length === 0) {
+        msg += "Email Id Required !";
+      }
+      else if (!reemail.test(loginform.Email.value)) {
+        msg += "Invalid Email Id";
+      }
+      else if (loginform.Password.value.length === 0) {
+        msg += "Password Id Required !";
+      }
+      else if (!repass.test(loginform.Password.value)) {
+        msg += "Invalid Password Id";
+      }
+
+
+      if (msg !== "") {
+        alert(msg);
+        return false;
+      }
+      
+      
+      return true;}
+  </script>
+</head>
+
+<body>
+
+  <div class="mainbody"></div>
+  <div class="container">
+    <div class="login">
+      <h1>Student Login</h1>
+      <form name="loginform" action="./jsp_of_login.jsp">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" class="add" name="Email" required />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="Password" class="add" required />
+        </div>
+        <div class="aflex">
+            <input type="submit" style=" padding: 12px;font-size: medium; color:white; font-weight:bold;font-family: 'Open Sans', sans-serif;background-color: rgb(67, 9, 114)" onclick="return check();" value="Login" target="_self">
+          <a href=".\signuppage.html" target="_self">Signup</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
